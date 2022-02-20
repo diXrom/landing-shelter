@@ -1,0 +1,45 @@
+.promo {
+  overflow: hidden;
+}
+
+.promo__wrapper {
+  padding-top: 180px;
+  background: url("../../../assets/icons/start-screen-gradient-background.svg");
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include media-mobile {
+    flex-direction: column-reverse;
+  }
+}
+
+.promo__content {
+  max-width: 460px;
+  padding-bottom: 75px;
+  @include media-tablet {
+    padding-right: 0;
+  }
+  @include media-mobile {
+    text-align: center;
+  }
+}
+
+.promo__title {
+  max-width: 310px;
+  margin: 0 0 42px;
+}
+
+.promo__text {
+  margin: 0 0 38px;
+  @include font($size: 1.5rem, $height: 2.4rem);
+  color: $color-dark-s;
+}
+.promo__button {
+  display: flex;
+  align-items: center;
+}
+.promo__image {
+  @include media-mobile {
+    max-width: 100%;
+  }
+}

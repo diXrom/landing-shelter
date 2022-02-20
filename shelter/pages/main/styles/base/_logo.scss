@@ -1,0 +1,13 @@
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__title {
+    margin: 0 0 10px;
+  }
+  &__subtitle {
+    color: $color-light-xl;
+    @include font($size: 1.3rem, $height: 1.5rem);
+    letter-spacing: 0.1em;
+  }
+}
