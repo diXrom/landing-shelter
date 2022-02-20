@@ -1,27 +1,23 @@
-.promo {
-  overflow: hidden;
-}
-
 .promo__wrapper {
   padding-top: 180px;
   background: url("../../../assets/icons/start-screen-gradient-background.svg");
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @include media-mobile {
+  /* @include media-mobile {
     flex-direction: column-reverse;
-  }
+  } */
 }
 
 .promo__content {
-  max-width: 460px;
-  padding-bottom: 75px;
-  @include media-tablet {
+  margin-right: 42px;
+  padding-bottom: 85px;
+  /* @include media-tablet {
     padding-right: 0;
   }
   @include media-mobile {
     text-align: center;
-  }
+  } */
 }
 
 .promo__title {
@@ -39,7 +35,7 @@
   align-items: center;
 }
 .promo__image {
-  @include media-mobile {
+  /* @include media-tablet {
     max-width: 100%;
-  }
+  } */
 }

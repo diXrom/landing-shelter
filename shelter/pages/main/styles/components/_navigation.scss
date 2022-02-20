@@ -10,13 +10,14 @@
   color: $color-dark-s;
   @extend %transition;
   &:not(:last-child) {
-    margin-right: 35px;
+    margin-right: 35.5px;
+    margin-bottom: 4px;
   }
   &.active {
     color: $color-light-s;
     &:after {
       position: absolute;
-      bottom: 0;
+      bottom: -3px;
       left: 0;
 
       content: "";

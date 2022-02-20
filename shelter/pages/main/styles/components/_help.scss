@@ -1,0 +1,22 @@
+.help__wrapper {
+  text-align: center;
+  padding: 80px 0 100px;
+  background: $color-light-xl;
+}
+
+.help__title {
+  margin: 0 0 60px;
+}
+
+.help__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  > * {
+    margin: 0 60px 60px;
+  }
+}
+
+.help__name {
+  margin: 20px 0 0;
+}
