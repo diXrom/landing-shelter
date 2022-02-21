@@ -1,5 +1,3 @@
-
-
 //Abstract
 @import "abstract/constants";
 @import "abstract/mixins";
@@ -10,7 +8,6 @@
 @import "base/base";
 @import "base/buttons";
 @import "base/logo";
-/* @import "base/icons"; */
 @import "base/hamburger";
 /* @import "base/modal"; */
 
@@ -18,7 +15,7 @@
 @import "layouts/wrapper";
 @import "layouts/header";
 @import "layouts/columns";
-/* @import "layouts/footer"; */
+@import "layouts/footer";
 
 // Components
 @import "components/navigation";
@@ -26,4 +23,5 @@
 @import "components/about";
 @import "components/pets";
 @import "components/help";
+@import "components/donation";
 
