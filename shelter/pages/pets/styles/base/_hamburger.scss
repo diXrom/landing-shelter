@@ -1,0 +1,34 @@
+.hamburger {
+  width: 50px;
+  display: none;
+  @include media-tablet {
+    display: block;
+  }
+  
+}
+.hamburger:before,
+.hamburger:after,
+.hamburger div {
+  background: #fff;
+  content: "";
+  display: none;
+  height: 6px;
+  border-radius: 3px;
+  margin: 7px 0;
+  transition: 0.5s;
+  @include media-tablet {
+    display: block;
+  }
+}
+.hamburger.active:before {
+  transform: translateY(13px) rotate(135deg);
+  background: $color-dark-l;
+}
+.hamburger.active:after {
+  transform: translateY(-13px) rotate(-135deg);
+  background:  $color-dark-l;
+}
+
+.hamburger.active div {
+  transform: scale(0);
+}
