@@ -2,10 +2,10 @@
   max-width: $content-width;
   margin: 0 auto;
   padding: 0 40px;
-  @include media-laptop {
-    padding: 0 46px;
+  @include media-tablet {
+    padding: 0 30px;
   }
   @include media-mobile {
-    padding: 0 21px;
+    padding: 0 10px;
   }
 }
