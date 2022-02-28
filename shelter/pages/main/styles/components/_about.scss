@@ -16,8 +16,18 @@
 .about__content {
   max-width: 430px;
   margin-left: 120px;
+  @include media-laptop {
+    margin-left: 80px;
+  }
   @include media-tablet {
     margin: 0 0 80px;
+  }
+  @include media-tabletsmall {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 15px 43px;
   }
   & > *:not(:last-child) {
     margin: 0 0 25px;
@@ -25,14 +35,13 @@
       margin: 0 0 23px;
     }
   }
-  @include media-mobile {
-    text-align: center;
-    margin: 0 15px 43px;
-  }
 }
 
 .about__title {
   max-width: 370px;
+  @include media-mobile {
+    max-width: 290px;
+  }
 }
 
 .about__text {

@@ -34,7 +34,7 @@
 }
 
 .header__navigation {
-  @media (max-width: 700px) {
+  @include media-tabletsmall {
     display: none;
   }
 }
