@@ -1,23 +1,29 @@
 .hamburger {
   width: 50px;
   display: none;
-  @include media-tablet {
+  @include media-tabletsmall {
     display: block;
   }
-  
+  @include media-mobile {
+    width: 30px;
+  }
 }
 .hamburger:before,
 .hamburger:after,
 .hamburger div {
-  background: #fff;
+  background: $color-dark-3xl;
   content: "";
   display: none;
   height: 6px;
   border-radius: 3px;
   margin: 7px 0;
   transition: 0.5s;
-  @include media-tablet {
+  @include media-tabletsmall {
     display: block;
+  }
+  @include media-mobile {
+    height: 2px;
+    margin: 8px 0;
   }
 }
 .hamburger.active:before {
@@ -26,7 +32,7 @@
 }
 .hamburger.active:after {
   transform: translateY(-13px) rotate(-135deg);
-  background:  $color-dark-l;
+  background: $color-dark-l;
 }
 
 .hamburger.active div {

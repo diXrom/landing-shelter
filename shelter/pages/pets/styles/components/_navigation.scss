@@ -34,7 +34,7 @@
 }
 
 .header__navigation {
-  /* @include media-tablet {
+  @include media-tabletsmall {
     display: none;
-  } */
+  }
 }

@@ -1,12 +1,26 @@
 .pets__wrapper {
   position: relative;
   text-align: center;
-  padding: 80px 0 91px;
+  padding-top: 80px;
+  padding-bottom: 91px;
   background: $color-light-l;
+  @include media-laptop {
+    padding-bottom: 70px;
+  }
+  @include media-tabletsmall {
+    padding-top: 42px;
+    padding-bottom: 38px;
+  }
 }
 
 .pets__title {
   margin: 0 0 60px;
+  @include media-laptop {
+    margin-bottom: 30px;
+  }
+  @include media-tabletsmall {
+    margin-bottom: 42px;
+  }
 }
 
 .pet-wrapper {
@@ -15,6 +29,12 @@
   row-gap: 30px;
   > * {
     flex-basis: 21%;
+    @include media-laptop {
+      flex-basis: 32%;
+    }
+    @include media-tabletsmall {
+      flex-basis: 48%;
+    }
   }
 }
 
@@ -24,7 +44,19 @@
   flex-direction: column;
   position: relative;
 }
-
+.pet:nth-child(4),
+.pet:nth-child(5),
+.pet:nth-child(6) {
+  @include media-tabletsmall {
+    display: none;
+  }
+}
+.pet:nth-child(7),
+.pet:nth-child(8) {
+  @include media-laptop {
+    display: none;
+  }
+}
 .pet__content {
   padding: 30px 0 30px;
   flex-grow: 1;
@@ -36,8 +68,14 @@
 }
 .pets__controls {
   margin-top: 60px;
+  @include media-laptop {
+    margin-top: 40px;
+  }
   & > *:not(:last-child) {
     margin-right: 15px;
+    @include media-tabletsmall {
+      margin-right: 5px;
+    }
   }
 }
 .pets__number {

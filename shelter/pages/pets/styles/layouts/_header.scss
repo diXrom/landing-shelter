@@ -1,5 +1,11 @@
 .header {
   padding: 30px 0;
+  @include media-tablet {
+    padding: 30px 0;
+  }
+  @include media-mobile {
+    padding-right: 43px;
+  }
 }
 
 .header__wrapper {
@@ -10,11 +16,6 @@
 }
 
 .header__hamburger {
-  margin: 20px 0 0 20px;
- /*  @include media-mobile {
-    position: absolute;
-    left: 0;
-  } */
   &.active {
     position: absolute;
     top: -5px;
