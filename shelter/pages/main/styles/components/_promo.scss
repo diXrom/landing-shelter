@@ -22,6 +22,7 @@
   margin-right: 42px;
   padding-bottom: 85px;
   @include media-tablet {
+    padding-bottom: 98px;
     margin-right: 0;
     max-width: 460px;
   }
@@ -73,9 +74,12 @@
     align-self: end;
   }
   @include media-tablet {
+    max-width: 569px;
+  }
+  @include media-tabletsmall {
     max-width: 82%;
   }
   @include media-mobile {
-    max-width: 93%;
+    max-width: 89%;
   }
 }
