@@ -24,6 +24,11 @@
     @content;
   }
 }
+@mixin media-tabletsmall {
+  @media (max-width: $tablet-small-width) {
+    @content;
+  }
+}
 
 @mixin media-mobile {
   @media (max-width: $mobile-big-width) {
