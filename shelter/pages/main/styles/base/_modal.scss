@@ -8,12 +8,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .modal {
     position: relative;
     border-radius: 10px;
-    background-color: $color-light;
+    background-color: $color-light-xl;
     width: 675px;
     min-height: 120px;
     max-height: 90%;

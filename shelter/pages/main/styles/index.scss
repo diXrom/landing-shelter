@@ -3,13 +3,13 @@
 @import "abstract/mixins";
 @import "abstract/placeholders";
 
-//Base
+//Base   background: black;
 @import "base/normalize";
 @import "base/base";
 @import "base/buttons";
 @import "base/logo";
 @import "base/hamburger";
-/* @import "base/modal"; */
+@import "base/modal";
 
 //Layouts
 @import "layouts/wrapper";
@@ -24,4 +24,3 @@
 @import "components/pets";
 @import "components/help";
 @import "components/donation";
-
