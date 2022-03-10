@@ -1,0 +1,44 @@
+@keyframes show {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes hoverLink {
+    from {
+      color: $color-dark-s;
+    }
+    to {
+      color: $color-light-s;
+    }
+  }
+  @keyframes showAgain {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes showRight {
+    from {
+      transform: translateX(250%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes showLeft {
+    from {
+      transform: translateX(-250%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }

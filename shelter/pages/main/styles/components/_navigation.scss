@@ -8,7 +8,7 @@
   position: relative;
   list-style: none;
   color: $color-dark-s;
-  transition: color 0.5s ease-in-out;
+  cursor: pointer;
   &:not(:last-child) {
     margin-right: 35.5px;
     margin-bottom: 4px;
@@ -27,9 +27,8 @@
       background: $color-primary;
     }
   }
-  &:hover {
-    color: $color-light-s;
-    cursor: pointer;
+  &:not(:first-child):hover {
+    animation: hoverLink 0.5s ease-in-out forwards;
   }
 }
 .header__logo {
@@ -87,20 +86,4 @@
   }
 }
 
-@keyframes show {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 
-@keyframes showAgain {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
