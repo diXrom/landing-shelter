@@ -1,4 +1,3 @@
-console.log(document.documentElement.clientWidth);
 function hamburgerFn() {
   const btnBurger = document.querySelector('.hamburger');
   const header = document.querySelector('.header');
@@ -36,7 +35,6 @@ function slidesFn() {
   const sliderWrapper = document.querySelector('.pets__slider')
   const slider = document.querySelector('.pet-wrapper')
   const cards = [];
-  let copyCards = [];
   let index = 0;
   class Card {
     constructor({ name, img, type, breed, description, age, inoculations, diseases, parasites }) {
@@ -133,7 +131,6 @@ function slidesFn() {
   const createSlideFromSize = () => {
     const width = parseInt(window.getComputedStyle(sliderWrapper).width);
     const amountSlides = document.querySelectorAll('.pets__slide').length;
-   /*  copyCards = [...cards] */
     let fnArr = Array(6).fill(0);
     if ((amountSlides == 0 || amountSlides > 6) && width > 583) {
       resetSlider();

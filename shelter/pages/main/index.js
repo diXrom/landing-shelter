@@ -1,5 +1,3 @@
-console.log(document.documentElement.clientWidth);
-
 function hamburgerFn() {
   const btnBurger = document.querySelector('.hamburger');
   const header = document.querySelector('.header');
@@ -21,7 +19,6 @@ function hamburgerFn() {
     document.body.style.paddingRight = '16px';
     btnBurger.style.right = '46px';
   }
-
   nav.addEventListener('click', closeByLink)
   btnBurger.addEventListener('click', toggleMenu)
   document.addEventListener('click', closeByOberlay);
