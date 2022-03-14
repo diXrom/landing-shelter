@@ -1,14 +1,14 @@
 .pets__wrapper {
   position: relative;
   text-align: center;
-  padding-top: 80px;
+  padding-top: 180px;
   padding-bottom: 91px;
   background: $color-light-l;
   @include media-laptop {
     padding-bottom: 70px;
   }
   @include media-tabletsmall {
-    padding-top: 42px;
+    padding-top: 142px;
     padding-bottom: 38px;
   }
 }
@@ -22,39 +22,61 @@
     margin-bottom: 42px;
   }
 }
-
+.pets__slider {
+  margin: 0 auto;
+  width: 1203.5px;
+  height: 900px;
+  overflow: hidden;
+  @include media-laptop {
+    width: 583.5px;
+    height: 1365px;
+  }
+  @include media-tabletsmall {
+    width: 274px;
+  }
+}
 .pet-wrapper {
-  justify-content: center;
+  width: 600%;
+  flex-wrap: nowrap;
+  transition: transform 0.6s ease-in-out;
+  @include media-laptop {
+    width: 800%;
+  }
+  @include media-tabletsmall {
+    width: 1600%;
+  }
+}
+.pets__slide {
+  display: flex;
+  flex-wrap: wrap;
   column-gap: 40px;
   row-gap: 30px;
   > * {
-    flex-basis: 21%;
-    @include media-laptop {
-      flex-basis: 32%;
-    }
-    @include media-tabletsmall {
-      flex-basis: 48%;
-    }
+    flex-basis: 270px;
+  }
+  &:first-child {
+    margin-left: 2px;
   }
 }
-
 .pet {
   cursor: pointer;
   display: flex;
   flex-direction: column;
   position: relative;
-}
-.pet:nth-child(4),
-.pet:nth-child(5),
-.pet:nth-child(6) {
-  @include media-tabletsmall {
-    display: none;
+  transition: box-shadow 0.4s ease-in-out;
+  animation: show 0.5s ease-in-out;
+  &.slideLeft {
+    animation: showLeft 0.5s ease-in-out;
   }
-}
-.pet:nth-child(7),
-.pet:nth-child(8) {
-  @include media-laptop {
-    display: none;
+  &.slideRight {
+    animation: showRight 0.5s ease-in-out;
+  }
+  &:hover {
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+  }
+  &:hover button {
+    background: $color-primary-light;
+    border-color: $color-primary-light;
   }
 }
 .pet__content {
@@ -67,6 +89,8 @@
   margin: 0 0 29px;
 }
 .pets__controls {
+  display: flex;
+  justify-content: center;
   margin-top: 60px;
   @include media-laptop {
     margin-top: 40px;
@@ -79,13 +103,40 @@
   }
 }
 .pets__number {
-  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 51px;
+  height: 51px;
+  border-radius: 100%;
+
+  @extend %font-add;
+  @include font($size: 2rem, $height: 2.3rem);
+  color: $color-dark-3xl;
+  background-color: $color-primary;
 }
 .pets__arrow {
-  border-radius: 100px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+
+  @extend %font-add;
+  @include font($size: 2rem, $height: 2.3rem);
   cursor: pointer;
+  color: $color-dark-3xl;
+  border: 2px solid $color-primary;
   @extend %transition;
-  /* &:hover {
+  &:hover {
     background-color: $color-primary;
-  } */
+  }
+  &.inactive {
+    cursor: default;
+    border-color: $color-dark-s;
+    &:hover {
+      background: none;
+    }
+  }
 }

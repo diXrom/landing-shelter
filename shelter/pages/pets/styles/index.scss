@@ -6,10 +6,11 @@
 //Base
 @import "base/normalize";
 @import "base/base";
+@import "base/animation";
 @import "base/buttons";
 @import "base/logo";
 @import "base/hamburger";
-/* @import "base/modal"; */
+@import "base/modal";
 
 //Layouts
 @import "layouts/wrapper";

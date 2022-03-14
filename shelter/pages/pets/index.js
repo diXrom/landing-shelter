@@ -1,5 +1,4 @@
 console.log(document.documentElement.clientWidth);
-
 function hamburgerFn() {
   const btnBurger = document.querySelector('.hamburger');
   const header = document.querySelector('.header');
@@ -29,11 +28,16 @@ function hamburgerFn() {
 }
 hamburgerFn();
 function slidesFn() {
-  const btnLeft = document.querySelector('.pet__arrow-left')
-  const btnRight = document.querySelector('.pet__arrow-right')
+  const btnLeft = document.querySelector('.pets__arrow-left')
+  const btnRight = document.querySelector('.pets__arrow-right')
+  const btnFirst = document.querySelector('.pets__arrow-first')
+  const btnLast = document.querySelector('.pets__arrow-last')
+  const numSlide = document.querySelector('.pets__number')
   const sliderWrapper = document.querySelector('.pets__slider')
   const slider = document.querySelector('.pet-wrapper')
   const cards = [];
+  let copyCards = [];
+  let index = 0;
   class Card {
     constructor({ name, img, type, breed, description, age, inoculations, diseases, parasites }) {
       this.name = name;
@@ -106,34 +110,85 @@ function slidesFn() {
     if (!response.ok) { throw new Error(`Ошибка статус ${response.status}`); }
     return await response.json();
   };
-  const createCards = (arr, wrapper, num) => {
-    let newArr = cards.splice(0, num);
-    newArr.forEach(card => wrapper.append(card.render()))
-    arr.push(...newArr);
+  const createSlide = (arr, wrapper, num) => {
+    const slide = document.createElement('div');
+    const newArr = cards.splice(0, num);
+    slide.classList.add('pets__slide');
+    newArr.forEach((card, i) => {
+      slide.append(card.render())
+      i % 2 ? arr.unshift(card) : arr.push(card);
+    })
+    wrapper.append(slide)
   };
-  const createCardsFromSize = () => {
-    const slides = document.querySelectorAll('.pet')
-    if (slides.length == 3) return;
-    createCards(cards, slider, 1);
-    if (slides.length == 2) return;
-    createCards(cards, slider, 1);
+  const resetSlider = (hard = true) => {
+    if (hard) slider.innerHTML = '';
+    btnLeft.classList.add('inactive');
+    btnFirst.classList.add('inactive');
+    btnRight.classList.remove('inactive')
+    btnLast.classList.remove('inactive')
+    index = 0;
+    numSlide.innerHTML = 1;
+    slider.style.transform = `translateX(0px)`
+  }
+  const createSlideFromSize = () => {
+    const width = parseInt(window.getComputedStyle(sliderWrapper).width);
+    const amountSlides = document.querySelectorAll('.pets__slide').length;
+   /*  copyCards = [...cards] */
+    let fnArr = Array(6).fill(0);
+    if ((amountSlides == 0 || amountSlides > 6) && width > 583) {
+      resetSlider();
+      fnArr.forEach(() => createSlide(cards, slider, 8))
+    }
+    if ((amountSlides == 0 || amountSlides == 6 || amountSlides == 16) && width == 583) {
+      resetSlider();
+      fnArr.concat(0, 0).forEach(() => createSlide(cards, slider, 6))
+    }
+    if ((amountSlides == 0 || amountSlides == 8) && width == 274) {
+      resetSlider();
+      fnArr.concat(...Array(10).fill(0)).forEach(() => createSlide(cards, slider, 3))
+    }
   };
-  const slideMove = (sideClass, num) => {
-    slider.innerHTML = '';
-    const width = window.getComputedStyle(sliderWrapper).width;
-    parseInt(width) < 994 ? parseInt(width) < 584 ? num = 1 : num = 2 : num = 3;
-    createCards(cards, slider, num)
-    const slides = document.querySelectorAll('.pet')
-    slides.forEach(slide => slide.classList.add(sideClass))
+  const validSlideNum = (num, length) => {
+    if (num <= 0) index = 0;
+    if (num > length) index = length;
+    btnLeft.classList.add('inactive');
+    btnFirst.classList.add('inactive');
+    btnRight.classList.remove('inactive')
+    btnLast.classList.remove('inactive')
+    if (index >= 1) {
+      btnLeft.classList.remove('inactive')
+      btnFirst.classList.remove('inactive')
+    }
+    if (index >= length) {
+      btnRight.classList.add('inactive');
+      btnLast.classList.add('inactive');
+    }
+    if (num > 0 && num < length + 1) return false;
+    return true;
+  }
+  const slideMove = (num, back = 0) => {
+    const width = parseInt(window.getComputedStyle(sliderWrapper).width);
+    const amountSlides = document.querySelectorAll('.pets__slide').length;
+    if (validSlideNum(num, amountSlides - 1)) return;
+    if (back) back = width
+    slider.style.transform = `translateX(-${width * num - back}px)`
+    numSlide.innerHTML = index + 1;
   };
-  const slideRight = () => slideMove('slideRight');
-  const slideLeft = () => slideMove('slideLeft');
+  const slidefirst = () => resetSlider(false);
+  const slideLast = () => {
+    const amountSlides = document.querySelectorAll('.pets__slide').length;
+    slideMove(index = amountSlides - 1)
+  };
+  const slideRight = () => slideMove(++index);
+  const slideLeft = () => slideMove(--index + 1, true);
   getData('../../assets/json/pets.json')
     .then(data => data.forEach(obj => cards.push(new Card(obj))))
-    .then(() => createCards(cards, slider, 3))
+    .then(() => createSlideFromSize())
+  btnFirst.addEventListener('click', slidefirst)
+  btnLast.addEventListener('click', slideLast)
   btnRight.addEventListener('click', slideRight)
   btnLeft.addEventListener('click', slideLeft)
-  window.addEventListener('resize', createCardsFromSize);
+  window.addEventListener('resize', createSlideFromSize);
   window.addEventListener('mouseover', hoverOnPopup);
   window.addEventListener('mouseover', hoverOutPopup);
   window.addEventListener('click', closePopup);

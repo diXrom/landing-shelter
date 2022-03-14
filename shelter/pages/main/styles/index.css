@@ -543,11 +543,6 @@ h5 {
   border-radius: 9px;
 }
 
-@font-face {
-  font-family: helpme;
-  src: url("");
-}
-
 @-webkit-keyframes show {
   from {
     opacity: 0;
@@ -1062,11 +1057,6 @@ h5 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  /* &:after {
-    content: "";
-    width: 30%;
-    display: block;
-  } */
 }
 
 .layout-3-column > * {
@@ -1711,18 +1701,6 @@ h5 {
   transition: -webkit-transform 0.5s ease-in-out;
   transition: transform 0.5s ease-in-out;
   transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
-}
-
-@media (max-width: 1280px) {
-  .pet-wrapper {
-    width: 200%;
-  }
-}
-
-@media (max-width: 767px) {
-  .pet-wrapper {
-    width: 200%;
-  }
 }
 
 .pet-wrapper > * {

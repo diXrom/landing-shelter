@@ -36,12 +36,6 @@
   justify-content: flex-start;
   gap: 90px;
   transition: transform 0.5s ease-in-out;
-  @include media-laptop {
-    width: 200%;
-  }
-  @include media-tabletsmall {
-    width: 200%;
-  }
   > * {
     flex-basis: 270px;
     margin-bottom: 61px;
