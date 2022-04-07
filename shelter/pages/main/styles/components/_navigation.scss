@@ -8,7 +8,9 @@
   position: relative;
   list-style: none;
   color: $color-dark-s;
-  cursor: pointer;
+  a {
+    cursor: pointer;
+  }
   &:not(:last-child) {
     margin-right: 35.5px;
     margin-bottom: 4px;

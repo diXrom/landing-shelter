@@ -8,7 +8,9 @@
   position: relative;
   list-style: none;
   color: $color-dark-l;
-  cursor: pointer;
+  a {
+    cursor: pointer;
+  }
   &:not(:last-child) {
     margin-right: 35.5px;
     margin-bottom: 4px;
@@ -64,8 +66,8 @@
   }
 }
 .header.mobile {
-  .header__wrapper{
-    background:none;
+  .header__wrapper {
+    background: none;
   }
   .header__logo {
     position: absolute;

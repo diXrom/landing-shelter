@@ -82,8 +82,8 @@
     padding-left: 5px;
   }
 }
-.contacts__tel,
-.contacts__email {
+.contacts__tel a,
+.contacts__email a{
   display: flex;
   align-items: center;
   gap: 20px;
@@ -93,7 +93,7 @@
 .contacts__email {
   margin-bottom: 44px;
 }
-.location__link {
+.location__link a{
   display: flex;
   align-items: center;
   gap: 20px;

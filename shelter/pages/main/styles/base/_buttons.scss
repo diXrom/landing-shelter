@@ -10,7 +10,7 @@
 
   border-radius: 100px;
   cursor: pointer;
-  @extend %transition;
+  transition: background .3s ease-in-out, border-color .3s ease-in-out;
   &_bordered {
     background: $color-light-xl;
     border: 2px solid $color-primary;

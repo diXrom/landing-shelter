@@ -1,5 +1,5 @@
 .promo {
-  overflow: hidden;
+/*   overflow: hidden; */
 }
 .promo__wrapper {
   padding-top: 180px;
@@ -20,7 +20,7 @@
 
 .promo__content {
   margin-right: 42px;
-  padding-bottom: 85px;
+  padding-bottom: 77px;
   @include media-tablet {
     padding-bottom: 98px;
     margin-right: 0;

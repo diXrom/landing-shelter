@@ -6,6 +6,7 @@ function hamburgerFn() {
   const closeByOberlay = (e) => !(e.target.classList.contains('overlay')) || toggleMenu();
   const resizeWindow = () => !(window.innerWidth > 766 && header.classList.contains('overlay')) || toggleMenu();
   const toggleMenu = () => {
+    if(window.innerWidth > 767) return;
     let windowWidth = window.innerWidth;
     let documentWidth = document.documentElement.offsetWidth;
     header.classList.toggle('overlay');
@@ -52,11 +53,11 @@ function slidesFn() {
     render() {
       const card = document.createElement('article');
       card.classList.add('pet', 'block-shadowed');
-      card.addEventListener('click', () => {
+     /*  card.addEventListener('click', () => {
         document.body.append(this.popup)
         document.documentElement.style.overflow = 'hidden';
         document.body.style.paddingRight = '16px';
-      })
+      }) */
       card.innerHTML = `<img class="pet__image" src=${this.img} alt="animal">
       <div class="pet__content">
         <h4 class="pet__name">${this.name}</h4>
@@ -181,13 +182,13 @@ function slidesFn() {
   getData('../../assets/json/pets.json')
     .then(data => data.forEach(obj => cards.push(new Card(obj))))
     .then(() => createSlideFromSize())
-  btnFirst.addEventListener('click', slidefirst)
+/*   btnFirst.addEventListener('click', slidefirst)
   btnLast.addEventListener('click', slideLast)
   btnRight.addEventListener('click', slideRight)
   btnLeft.addEventListener('click', slideLeft)
   window.addEventListener('resize', createSlideFromSize);
   window.addEventListener('mouseover', hoverOnPopup);
   window.addEventListener('mouseover', hoverOutPopup);
-  window.addEventListener('click', closePopup);
+  window.addEventListener('click', closePopup); */
 }
 slidesFn();
