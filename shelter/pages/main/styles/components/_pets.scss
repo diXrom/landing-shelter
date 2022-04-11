@@ -2,7 +2,7 @@
   position: relative;
   text-align: center;
   padding-top: 80px;
-  padding-bottom: 100px;
+  padding-bottom: 113px;
   background: $color-light-l;
   @include media-tabletsmall {
     padding-top: 42px;
@@ -17,7 +17,7 @@
   }
 }
 .pets__slider {
-  margin: 0 auto;
+  margin: 0 auto 13px;
   width: 994px;
   height: 495px;
   overflow: hidden;

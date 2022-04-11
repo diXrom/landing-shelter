@@ -13,7 +13,7 @@
 }
 
 .help__title {
-  margin: 0 0 61px;
+  margin: 0 0 60px;
   @include media-tabletsmall {
     margin-bottom: 42px;
   }
@@ -59,7 +59,7 @@
   }
 }
 .help__name {
-  margin: 20px 0 0;
+  margin: 19px 0 0;
   @include media-tabletsmall {
     margin-top: 12px;
     @include font($size: 1.5rem, $height: 1.65rem);

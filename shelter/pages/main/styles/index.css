@@ -1416,7 +1416,7 @@ h5 {
 
 .promo__content {
   margin-right: 42px;
-  padding-bottom: 77px;
+  padding-bottom: 79px;
 }
 
 @media (max-width: 68px) {
@@ -1468,7 +1468,7 @@ h5 {
 }
 
 .promo__text {
-  margin: 0 0 38px;
+  margin: 0 0 42px;
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 400;
@@ -1645,7 +1645,7 @@ h5 {
   position: relative;
   text-align: center;
   padding-top: 80px;
-  padding-bottom: 100px;
+  padding-bottom: 113px;
   background: #f6f6f6;
 }
 
@@ -1667,7 +1667,7 @@ h5 {
 }
 
 .pets__slider {
-  margin: 0 auto;
+  margin: 0 auto 13px;
   width: 994px;
   height: 495px;
   overflow: hidden;
@@ -1851,7 +1851,7 @@ h5 {
 }
 
 .help__title {
-  margin: 0 0 61px;
+  margin: 0 0 60px;
 }
 
 @media (max-width: 67.5px) {
@@ -1926,7 +1926,7 @@ h5 {
 }
 
 .help__name {
-  margin: 20px 0 0;
+  margin: 19px 0 0;
 }
 
 @media (max-width: 67.5px) {

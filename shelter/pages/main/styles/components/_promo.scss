@@ -20,7 +20,7 @@
 
 .promo__content {
   margin-right: 42px;
-  padding-bottom: 77px;
+  padding-bottom: 79px;
   @include media-tablet {
     padding-bottom: 98px;
     margin-right: 0;
@@ -50,7 +50,7 @@
 }
 
 .promo__text {
-  margin: 0 0 38px;
+  margin: 0 0 42px;
   @include font($size: 1.5rem, $height: 2.4rem);
   color: $color-dark-s;
   @include media-tablet {
