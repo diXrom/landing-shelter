@@ -1736,6 +1736,7 @@ h5 {
   transition: -webkit-box-shadow 0.4s ease-in-out;
   transition: box-shadow 0.4s ease-in-out;
   transition: box-shadow 0.4s ease-in-out, -webkit-box-shadow 0.4s ease-in-out;
+  background-color: #fafafa;
 }
 
 .pet.slideLeft {
