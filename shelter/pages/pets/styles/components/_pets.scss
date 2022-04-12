@@ -136,6 +136,7 @@
   &.inactive {
     cursor: default;
     border-color: $color-dark-s;
+    color: $color-dark-s;
     &:hover {
       background: none;
     }

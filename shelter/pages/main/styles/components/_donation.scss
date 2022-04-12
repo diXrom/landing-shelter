@@ -79,6 +79,7 @@
     margin-right: 15px;
   }
   &:hover {
+    cursor: pointer;
     background: $color-primary-light;
     border-color: $color-primary-light;
   }
