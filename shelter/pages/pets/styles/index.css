@@ -1564,6 +1564,7 @@ h5 {
 }
 
 .pet:hover {
+  background-color: #ffffff;
   -webkit-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
           box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
 }
@@ -1667,6 +1668,7 @@ h5 {
 .pets__arrow.inactive {
   cursor: default;
   border-color: #cdcdcd;
+  color: #cdcdcd;
 }
 
 .pets__arrow.inactive:hover {

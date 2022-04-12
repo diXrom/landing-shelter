@@ -1750,6 +1750,7 @@ h5 {
 }
 
 .pet:hover {
+  background-color: #ffffff;
   -webkit-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
           box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
 }
@@ -2076,6 +2077,7 @@ h5 {
 }
 
 .donation__credit:hover {
+  cursor: pointer;
   background: #fddcc4;
   border-color: #fddcc4;
 }
