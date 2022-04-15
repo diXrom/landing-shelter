@@ -1,5 +1,5 @@
 .promo {
-/*   overflow: hidden; */
+  overflow: hidden;
 }
 .promo__wrapper {
   padding-top: 180px;
@@ -12,8 +12,8 @@
   @include media-tablet {
     padding-top: 150px;
     flex-direction: column;
-    background: url("../../../assets/icons/title-background-tablet.svg")
-      no-repeat;
+    background-position: center center;
+    background-size: cover;
     justify-content: center;
   }
 }
@@ -33,6 +33,7 @@
     text-align: center;
   }
   @include media-mobile {
+    padding-bottom: 104px;
     max-width: 300px;
   }
 }
@@ -71,15 +72,16 @@
   max-width: 100%;
   @include media-laptop {
     max-width: 55%;
-    align-self: end;
   }
   @include media-tablet {
     max-width: 569px;
+    margin-left: 140px;
   }
   @include media-tabletsmall {
     max-width: 82%;
+    margin-right: 100px;
   }
   @include media-mobile {
-    max-width: 89%;
+    max-width: 87%;
   }
 }

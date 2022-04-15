@@ -4,7 +4,7 @@
   padding-bottom: 37px;
   background: $color-light-xl;
   @include media-laptop {
-    padding-bottom: 42px;
+    padding-bottom: 46px;
   }
   @include media-tabletsmall {
     padding-top: 42px;
@@ -34,7 +34,7 @@
       margin: 0 0 57px;
     }
     @include media-tabletsmall {
-      flex-basis: 44%;
+      flex-basis: 43%;
       margin-bottom: 30px;
       img {
         width: 50px;

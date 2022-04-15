@@ -8,6 +8,9 @@
     padding-top: 42px;
     padding-bottom: 42px;
   }
+  @include media-mobile {
+    padding-bottom: 54px;
+  }
 }
 
 .pets__title {
@@ -27,6 +30,9 @@
   @include media-tabletsmall {
     width: 274px;
     height: 472px;
+  }
+  @include media-mobile {
+    margin-bottom: 0;
   }
 }
 
@@ -119,6 +125,6 @@
 }
 .pets__button {
   @include media-tabletsmall {
-    margin-top: 17px;
+    margin-top: 30px;
   }
 }

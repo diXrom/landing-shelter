@@ -10,7 +10,7 @@
   }
   @include media-tabletsmall {
     padding-top: 42px;
-    padding-bottom: 42px;
+    padding-bottom: 40px;
   }
 }
 
@@ -31,7 +31,7 @@
   & > *:not(:last-child) {
     margin: 0 0 20px;
     @include media-tabletsmall {
-      margin: 0 0 19px;
+      margin: 0 0 20px;
     }
   }
 }

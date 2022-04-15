@@ -5,6 +5,7 @@
   cursor: pointer;
   @include media-tabletsmall {
     display: block;
+    margin-right: 10px;
   }
 }
 .hamburger:before,
