@@ -1685,7 +1685,7 @@ h5 {
   color: #4c4c4c;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 767.5px) {
   .about__text {
     text-align: justify;
   }
