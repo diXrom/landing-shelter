@@ -11,20 +11,6 @@ h1, h2, h3, h4, h5, .button, .animal__description, .animal__list, .pets__number,
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-.modal::-webkit-scrollbar {
-  width: 5px;
-}
-
-.modal::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 1px grey;
-          box-shadow: inset 0 0 1px grey;
-}
-
-.modal::-webkit-scrollbar-thumb {
-  background: #b1b1ee;
-  border-radius: 10px;
-}
-
 /* Base
    ========================================================================== */
 /**
@@ -1394,7 +1380,7 @@ h5 {
     padding-bottom: 100px;
     -webkit-transition: right 0.5s ease-in-out;
     transition: right 0.5s ease-in-out;
-    background: #292929;
+    background-color: #ffffff;
   }
   .header__navigation .navigation {
     display: -webkit-box;
@@ -1434,14 +1420,12 @@ h5 {
   z-index: 110;
   -webkit-animation: show 2s ease-in-out;
           animation: show 2s ease-in-out;
-}
-
-.header.mobile .header__logo .logo__title {
-  color: #f1cdb3;
-}
-
-.header.mobile .header__logo .logo__subtitle {
-  color: #ffffff;
+  /* .logo__title {
+      color: $color-primary;
+    }
+    .logo__subtitle {
+      color: $color-light-xl;
+    } */
 }
 
 .header.mobile .header__hamburger {
@@ -1449,13 +1433,13 @@ h5 {
   top: 41px;
   right: 30px;
   z-index: 110;
+  /* &:before,
+    &:after,
+    & div {
+      background: $color-primary;
+    } */
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
-}
-
-.header.mobile .header__hamburger:before, .header.mobile .header__hamburger:after,
-.header.mobile .header__hamburger div {
-  background: #f1cdb3;
 }
 
 @media (max-width: 425px) {
@@ -1470,16 +1454,16 @@ h5 {
 }
 
 .header.mobile .navigation__link {
-  color: #cdcdcd;
+  /* color: $color-dark-s; */
 }
 
 .header.mobile .navigation__link.active {
-  color: #fafafa;
+  /* color: $color-light-s; */
 }
 
 .header.mobile .navigation__link:not(:nth-child(2)):hover {
-  -webkit-animation: hoverLinkLight 0.5s ease-in-out forwards;
-          animation: hoverLinkLight 0.5s ease-in-out forwards;
+  -webkit-animation: hoverLink 0.5s ease-in-out forwards;
+          animation: hoverLink 0.5s ease-in-out forwards;
 }
 
 .pets__wrapper {

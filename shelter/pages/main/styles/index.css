@@ -11,20 +11,6 @@ h1, h2, h3, h4, h5, .button, .animal__description, .animal__list, .donation__tex
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-.modal::-webkit-scrollbar {
-  width: 5px;
-}
-
-.modal::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 1px grey;
-          box-shadow: inset 0 0 1px grey;
-}
-
-.modal::-webkit-scrollbar-thumb {
-  background: #b1b1ee;
-  border-radius: 10px;
-}
-
 /* Base
    ========================================================================== */
 /**

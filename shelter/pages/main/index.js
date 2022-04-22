@@ -17,7 +17,7 @@ function hamburgerFn() {
     if (!header.classList.contains('mobile')) return;
     document.documentElement.style.overflow = 'hidden';
     if (windowWidth == documentWidth) return;
-    document.body.style.paddingRight = '16px';
+    document.body.style.paddingRight = '17px';
     btnBurger.style.right = '46px';
   }
   nav.addEventListener('click', closeByLink)
@@ -48,11 +48,14 @@ function slidesFn() {
     render() {
       const card = document.createElement('article');
       card.classList.add('pet', 'block-shadowed');
-      /* card.addEventListener('click', () => {
+      card.addEventListener('click', () => {
+        let windowWidth = window.innerWidth;
+        let documentWidth = document.documentElement.offsetWidth;
         document.body.append(this.popup)
         document.documentElement.style.overflow = 'hidden';
-        document.body.style.paddingRight = '16px';
-      }) */
+        if (windowWidth == documentWidth) return;
+        document.body.style.paddingRight = '17px';
+      })
       card.innerHTML = `<img class="pet__image" src=${this.img} alt="animal">
       <div class="pet__content">
         <h4 class="pet__name">${this.name}</h4>
@@ -89,6 +92,7 @@ function slidesFn() {
     if (e.target.closest('.animal')) return;
     document.documentElement.style.overflow = '';
     document.body.style.paddingRight = '';
+    document.querySelector('.modal__close-icon').classList.remove('active');
     document.querySelector('.modal-overlay').remove();
   }
   const hoverOnPopup = e => {
@@ -129,11 +133,11 @@ function slidesFn() {
   getData('../../assets/json/pets.json')
     .then(data => data.forEach(obj => cards.push(new Card(obj))))
     .then(() => createCards(cards, slider, 3))
-/*   btnRight.addEventListener('click', slideRight)
+  btnRight.addEventListener('click', slideRight)
   btnLeft.addEventListener('click', slideLeft)
   window.addEventListener('resize', createCardsFromSize);
   window.addEventListener('mouseover', hoverOnPopup);
   window.addEventListener('mouseover', hoverOutPopup);
-  window.addEventListener('click', closePopup); */
+  window.addEventListener('click', closePopup);
 }
 slidesFn();
