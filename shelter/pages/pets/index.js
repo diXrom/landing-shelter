@@ -115,7 +115,7 @@ function slidesFn() {
   };
   const createSlide = (arr, wrapper, num) => {
     const slide = document.createElement('div');
-    const newArr = cards.splice(0, num);
+    const newArr = cards.splice(0, num).sort(() => (Math.random() > 0.5 ? 1 : -1));
     slide.classList.add('pets__slide');
     newArr.forEach((card, i) => {
       slide.append(card.render())
