@@ -109,7 +109,7 @@ function slidesFn() {
     return await response.json();
   };
   const createCards = (arr, wrapper, num) => {
-    let newArr = cards.splice(0, num);
+    let newArr = cards.splice(Math.round(Math.random()), num).sort(() => (Math.random() > 0.5 ? 1 : -1));
     newArr.forEach(card => wrapper.append(card.render()))
     arr.push(...newArr);
   };
