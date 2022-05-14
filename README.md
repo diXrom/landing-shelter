@@ -1,2 +1,2 @@
-# dixrom-JSFE2022Q1
-Private repository for @dixrom
+- Shelter is small a project with two pages, adaptive and interactive .
+- [Deploy](https://dixrom.github.io/landing-shelter/pages/main/index.html)
