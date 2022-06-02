@@ -1,0 +1,65 @@
+html,
+body {
+  font-size: 10px;
+  margin: 0;
+  @include media-tabletsmall {
+    overflow-x: hidden;
+    position: relative;
+  }
+}
+
+body {
+  @extend %font-prim;
+  @include font($size: 1.5rem, $height: 2.6rem);
+}
+
+h1 {
+  @extend %font-add;
+  @include font($size: 3.2rem, $height: 3.52rem);
+  color: $color-primary;
+  letter-spacing: 0.06em;
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+  @extend %font-add;
+  @include font($size: 4.4rem, $height: 5.72rem);
+  color: $color-light-xl;
+  @include media-mobile {
+    @include font($size: 2.5rem, $height: 3.25rem);
+    letter-spacing: 0.06em;
+  }
+}
+
+h3 {
+  margin: 0;
+  @extend %font-add;
+  @include font($size: 3.5rem, $height: 4.55rem);
+  letter-spacing: 0.06em;
+  color: $color-dark-l;
+  @include media-mobile {
+    @include font($size: 2.5rem, $height: 3.25rem);
+  }
+}
+
+h4 {
+  margin: 0;
+  @extend %font-add;
+  @include font($size: 2rem, $height: 2.3rem);
+  letter-spacing: 0.06em;
+  color: $color-dark-l;
+}
+
+h5 {
+  margin: 0;
+  @extend %font-add;
+  @include font($size: 1.5rem, $height: 1.65rem);
+  letter-spacing: 0.06em;
+  color: $color-dark-l;
+}
+
+.block-shadowed {
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 9px;
+}

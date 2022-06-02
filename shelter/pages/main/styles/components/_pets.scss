@@ -1,0 +1,130 @@
+.pets__wrapper {
+  position: relative;
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 113px;
+  background: $color-light-l;
+  @include media-tabletsmall {
+    padding-top: 42px;
+    padding-bottom: 42px;
+  }
+  @include media-mobile {
+    padding-bottom: 54px;
+  }
+}
+
+.pets__title {
+  margin: 0 0 60px;
+  @include media-mobile {
+    margin-bottom: 42px;
+  }
+}
+.pets__slider {
+  margin: 0 auto 13px;
+  width: 994px;
+  height: 495px;
+  overflow: hidden;
+  @include media-laptop {
+    width: 584px;
+  }
+  @include media-tabletsmall {
+    width: 274px;
+    height: 472px;
+  }
+  @include media-mobile {
+    margin-bottom: 0;
+  }
+}
+
+.pet-wrapper {
+  width: 200%;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  gap: 90px;
+  transition: transform 0.5s ease-in-out;
+  > * {
+    flex-basis: 270px;
+    margin-bottom: 61px;
+    @include media-mobile {
+      margin-bottom: 38px;
+    }
+  }
+  &:first-child {
+    margin-left: 2px;
+  }
+
+  @include media-laptop {
+    gap: 40px;
+  }
+}
+
+.pet {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: box-shadow 0.4s ease-in-out;
+  background-color: $color-light-s;
+  &.slideLeft {
+    animation: showLeft 0.5s ease-in-out;
+  }
+  &.slideRight {
+    animation: showRight 0.5s ease-in-out;
+  }
+  &:hover {
+    background-color: $color-light-xl;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+  }
+  &:hover button {
+    background: $color-primary-light;
+    border-color: $color-primary-light;
+  }
+}
+
+.pet__content {
+  padding: 30px 0 30px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.pet__name {
+  margin: 0 0 29px;
+}
+
+.pet__arrow {
+  position: absolute;
+  z-index: 100;
+  top: 50%;
+  transform: translateY(-33%);
+  border-radius: 100px;
+  cursor: pointer;
+  @extend %transition;
+  @include media-tabletsmall {
+    position: static;
+  }
+  &:hover {
+    background-color: $color-primary;
+  }
+  &-left {
+    left: 40px;
+    @include media-laptop {
+      left: 30px;
+    }
+    @include media-tabletsmall {
+      margin-right: 75px;
+    }
+  }
+  &-right {
+    transform: rotate(180deg) translateY(33%);
+    right: 40px;
+    @include media-laptop {
+      right: 30px;
+    }
+  }
+}
+.pets__button {
+  @include media-tabletsmall {
+    margin-top: 30px;
+  }
+}

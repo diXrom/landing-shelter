@@ -1,0 +1,131 @@
+.footer__wrapper {
+  padding-top: 40px;
+  background: url("../../../assets/icons/start-screen-gradient-background.svg")
+    no-repeat;
+  @include media-laptop {
+    padding-top: 13px;
+    background-size: cover;
+  }
+}
+.footer__content {
+  @include media-laptop {
+    column-gap: 20px;
+    row-gap: 38px;
+    justify-content: center;
+  }
+  @include media-mobile {
+    gap: 0;
+  }
+  & > * {
+    flex-basis: 25%;
+    @include media-laptop {
+      flex-basis: 45%;
+    }
+    @include media-tabletsmall {
+      flex-basis: 100%;
+    }
+  }
+}
+.contacts,
+.location {
+  display: flex;
+  flex-direction: column;
+  margin: 17px 0 60px;
+  @include media-laptop {
+    margin-bottom: 27px;
+    align-items: center;
+  }
+  @include media-mobile {
+    margin-bottom: 40px;
+  }
+}
+.contacts {
+  @include media-tabletsmall {
+    align-items: center;
+  }
+  @include media-tabletsmall {
+    margin-bottom: 23px;
+  }
+}
+
+.location {
+  margin-right: 20px;
+  @include media-laptop {
+    margin-right: 0;
+  }
+
+  & > *:not(:last-child) {
+    margin-bottom: 32px;
+    @include media-mobile {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.contacts__title {
+  margin-bottom: 40px;
+  color: $color-light-xl;
+  @include media-laptop {
+    max-width: 300px;
+  }
+  @include media-tabletsmall {
+    text-align: center;
+  }
+}
+.location__title {
+  margin-bottom: 33px;
+  color: $color-light-xl;
+  @include media-laptop {
+    max-width: 300px;
+  }
+  @include media-tabletsmall {
+    text-align: center;
+  }
+  @include media-mobile {
+    max-width: 294px;
+    padding-left: 5px;
+  }
+}
+.contacts__tel a,
+.contacts__email a {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: $color-primary;
+  @include media-laptop {
+    width: 300px;
+  }
+  @include media-tabletsmall {
+    justify-content:center;
+  }
+}
+.contacts__email {
+  margin-bottom: 44px;
+}
+.location__link a {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: $color-primary;
+  @include media-laptop {
+    width: 300px;
+  }
+  @include media-tabletsmall {
+    justify-content:center;
+  }
+  @include media-mobile {
+    justify-content:flex-start;
+  }
+}
+.footer__image {
+  max-width: 100%;
+  @include media-laptop {
+    max-width: 300px;
+  }
+  @include media-tabletsmall {
+    max-width: 325px;
+  }
+  @include media-mobile {
+    max-width: 260px;
+  }
+}

@@ -1,0 +1,27 @@
+.header {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  padding: 60px 0;
+  @include media-tablet {
+    padding: 30px 0;
+  }
+  @include media-mobile {
+    padding-right: 43px;
+  }
+}
+
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__hamburger {
+  &.active {
+    position: absolute;
+    top: -5px;
+    left: 20px;
+    z-index: 110;
+  }
+}

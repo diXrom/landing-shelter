@@ -1,0 +1,24 @@
+.hamburger {
+  width: 30px;
+  display: none;
+  transition: transform 0.5s ease-in-out;
+  cursor: pointer;
+  @include media-tabletsmall {
+    display: block;
+    margin-right: 10px;
+  }
+}
+.hamburger:before,
+.hamburger:after,
+.hamburger div {
+  background: $color-dark-3xl;
+  content: "";
+  display: none;
+  height: 2px;
+  margin: 8px 0;
+  border-radius: 3px;
+  transition: 0.5s;
+  @include media-tabletsmall {
+    display: block;
+  }
+}

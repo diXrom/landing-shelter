@@ -1,0 +1,32 @@
+.button {
+  @extend %font-add;
+  padding: 13px 42px;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.7rem;
+  line-height: 2.21rem;
+  letter-spacing: 0.06em;
+
+  border-radius: 100px;
+  cursor: pointer;
+  transition: background .3s ease-in-out, border-color .3s ease-in-out;
+  &_bordered {
+    background: $color-light-xl;
+    border: 2px solid $color-primary;
+    color: $color-dark-3xl;
+    &:hover {
+      background: $color-primary-light;
+      border-color: $color-primary-light;
+    }
+  }
+  &_colored {
+    background: $color-primary;
+    color: $color-dark-3xl;
+    border: 2px solid $color-primary;
+    &:hover {
+      background: $color-primary-light;
+      border-color: $color-primary-light;
+    }
+  }
+}

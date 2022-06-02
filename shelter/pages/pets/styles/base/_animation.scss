@@ -1,0 +1,55 @@
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes hoverLink {
+  from {
+    color: $color-dark-l;
+  }
+  to {
+    color: $color-dark-3xl;
+  }
+}
+@keyframes hoverLinkLight {
+  from {
+    color: $color-dark-s;
+  }
+  to {
+    color: $color-light-s;
+  }
+}
+
+@keyframes showRight {
+  from {
+    transform: translateX(250%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes showLeft {
+  from {
+    transform: translateX(-250%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes showPopup {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

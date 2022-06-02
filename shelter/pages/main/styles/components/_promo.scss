@@ -1,0 +1,87 @@
+.promo {
+  overflow: hidden;
+}
+.promo__wrapper {
+  padding-top: 180px;
+  background: url("../../../assets/icons/start-screen-gradient-background.svg")
+    no-repeat;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include media-tablet {
+    padding-top: 150px;
+    flex-direction: column;
+    background-position: center center;
+    background-size: cover;
+    justify-content: center;
+  }
+}
+
+.promo__content {
+  margin-right: 42px;
+  padding-bottom: 79px;
+  @include media-tablet {
+    padding-bottom: 98px;
+    margin-right: 0;
+    max-width: 460px;
+  }
+  @include media-tabletsmall {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  @include media-mobile {
+    padding-bottom: 104px;
+    max-width: 300px;
+  }
+}
+
+.promo__title {
+  max-width: 310px;
+  margin: 0 0 42px;
+  @include media-laptop {
+    min-width: 310px;
+  }
+  @include media-mobile {
+    margin: 0 42px 42px;
+    min-width: 260px;
+  }
+}
+
+.promo__text {
+  margin: 0 0 42px;
+  @include font($size: 1.5rem, $height: 2.4rem);
+  color: $color-dark-s;
+  @include media-tablet {
+    margin: 0 0 42px;
+  }
+  @include media-mobile {
+    margin: 0 2px 42px;
+  }
+}
+.promo__button {
+  display: flex;
+  align-items: center;
+  @include media-tablet {
+    justify-content: center;
+  }
+}
+.promo__image {
+  max-width: 100%;
+  @include media-laptop {
+    max-width: 55%;
+  }
+  @include media-tablet {
+    max-width: 569px;
+    margin-left: 140px;
+  }
+  @include media-tabletsmall {
+    max-width: 82%;
+    margin-right: 100px;
+  }
+  @include media-mobile {
+    max-width: 87%;
+  }
+}
